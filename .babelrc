@@ -1,0 +1,4 @@
+/*TODO: en este apartado deminiremos ciertas cosas que se necesitan para poder usar babel*/
+{
+  "presets": ["@babel/preset-env"],
+}
