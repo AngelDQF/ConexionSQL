@@ -10,7 +10,7 @@ const dbSettings = { //TODO: esta variable sirve para almacenar las configuracio
     trustServerCertificate: true,
   }
 }
-async function getConection() {//TODO: esta funcion sirve para crear una conexion con la base de datos
+export async function getConection() {//TODO: esta funcion sirve para crear una conexion con la base de datos
   try {
     const pool = await sql.connect(dbSettings);//TODO: esta funcion sirve para crear un pool de conexiones con la base de datos, permitiendonos hacer consultas a la base de datos
     return pool; //TODO: retornamos el pool de conexiones
@@ -18,4 +18,5 @@ async function getConection() {//TODO: esta funcion sirve para crear una conexio
     console.log(error);
   }
 }
-getConection();//TODO: ejecucion de launcion getConection
+//getConection();//TODO: ejecucion de launcion getConection
+export {sql};
