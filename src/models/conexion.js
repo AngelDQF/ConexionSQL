@@ -11,8 +11,11 @@ const dbSettings = { //TODO: esta variable sirve para almacenar las configuracio
   }
 }
 async function getConection() {//TODO: esta funcion sirve para crear una conexion con la base de datos
-  const pool = await sql.connect(dbSettings);//TODO: esta funcion sirve para crear un pool de conexiones con la base de datos, permitiendonos hacer consultas a la base de datos
-  const result=await pool.request().query('Select 1'); //TODO: esta funcion sirve para crear una peticion a la base de datos
-  console.log(result);
+  try {
+    const pool = await sql.connect(dbSettings);//TODO: esta funcion sirve para crear un pool de conexiones con la base de datos, permitiendonos hacer consultas a la base de datos
+    return pool; //TODO: retornamos el pool de conexiones
+  } catch (error) {
+    console.log(error);
+  }
 }
 getConection();//TODO: ejecucion de launcion getConection
