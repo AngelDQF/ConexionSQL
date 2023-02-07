@@ -3,7 +3,7 @@ const router = Router(); //TODO: Creamos una constante router
 import { getPruebas, postPrueba, getPrueba } from "../controllers/prueba.controller";
 
 router.get('/prueba',getPruebas);//TODO: Creacion de ruta para el apartado de productos
-router.get('/prueba',getPrueba);
+router.get('/prueba:id',getPrueba);
 
 router.post('/prueba',postPrueba);
 
